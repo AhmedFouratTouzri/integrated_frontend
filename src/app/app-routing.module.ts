@@ -4,8 +4,6 @@ import {HomeFourComponent} from './components/pages/home-four/home-four.componen
 import {ContactComponent} from './components/pages/contact/contact.component';
 import {ListingDetailsComponent} from './components/pages/listing-details/listing-details.component';
 import {ListingThreeComponent} from './components/pages/listing-three/listing-three.component';
-import {ListingTwoComponent} from './components/pages/listing-two/listing-two.component';
-import {ListingOneComponent} from './components/pages/listing-one/listing-one.component';
 import {ProductListComponent} from './components/pages/product-list/product-list.component';
 import {ProductsDetailsComponent} from './components/pages/products-details/products-details.component';
 import {CartComponent} from './components/pages/cart/cart.component';
@@ -28,8 +26,6 @@ import { MyAccountComponent } from './my-account/my-account.component';
 const routes: Routes = [
     {path: '', component: HomeFourComponent, canActivate: [AuthGuard]},
     {path: 'home', component: HomeFourComponent},
-    {path: 'places', component: ListingOneComponent},
-    {path: 'listing-two', component: ListingTwoComponent},
     {path: 'events', component: ListingThreeComponent},
     {path: 'place-details/:id', component: ListingDetailsComponent},
     {path: 'complaints', component: BlogOneComponent},

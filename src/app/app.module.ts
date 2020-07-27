@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/layouts/footer/footer.component';
@@ -9,16 +8,13 @@ import { FeedbackComponent } from './components/common/feedback/feedback.compone
 import { VideoComponent } from './components/common/video/video.component';
 import { ProcessComponent } from './components/common/process/process.component';
 import { HeaderOneComponent } from './components/layouts/header-one/header-one.component';
-import { HomeTwoComponent } from './components/pages/home-two/home-two.component';
 import { PartnerComponent } from './components/common/partner/partner.component';
 import { HeaderTwoComponent } from './components/layouts/header-two/header-two.component';
 import { HomeFourComponent } from './components/pages/home-four/home-four.component';
 import { InstagramComponent } from './components/common/instagram/instagram.component';
 import { HeaderThreeComponent } from './components/layouts/header-three/header-three.component';
-import { FunfactsComponent } from './components/common/funfacts/funfacts.component';import { HowItWorksComponent } from './components/pages/how-it-works/how-it-works.component';
+import { FunfactsComponent } from './components/common/funfacts/funfacts.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { ListingOneComponent } from './components/pages/listing-one/listing-one.component';
-import { ListingTwoComponent } from './components/pages/listing-two/listing-two.component';
 import { ListingThreeComponent } from './components/pages/listing-three/listing-three.component';
 import { ListingDetailsComponent } from './components/pages/listing-details/listing-details.component';
 import { ProductListComponent } from './components/pages/product-list/product-list.component';
@@ -62,17 +58,13 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     VideoComponent,
     ProcessComponent,
     HeaderOneComponent,
-    HomeTwoComponent,
     PartnerComponent,
     HeaderTwoComponent,
     HomeFourComponent,
     InstagramComponent,
     HeaderThreeComponent,
     FunfactsComponent,
-    HowItWorksComponent,
     ContactComponent,
-    ListingOneComponent,
-    ListingTwoComponent,
     ListingThreeComponent,
     ListingDetailsComponent,
     ProductListComponent,
