@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {ToastrService} from 'ngx-toastr';
 import {MustMatch} from '../../../helpers/must-match.validator';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-register',
@@ -16,7 +17,8 @@ export class RegisterComponent implements OnInit {
 
     constructor(public fb: FormBuilder,
                 private http: HttpClient,
-                private toastr: ToastrService) {
+                private toastr: ToastrService,
+                private router: Router) {
     }
 
     ngOnInit(): void {
@@ -56,5 +58,6 @@ export class RegisterComponent implements OnInit {
         this.http.post('http://localhost:8000/signup', formData).subscribe(
             (response) => this.toastr.success('You Have been Registred Succefully !', 'Congrats!'),
             (error) => this.toastr.success('You Have been Registred Succefully !', 'Congrats!'));
+            setTimeout(() => {  this.router.navigate(['/login']); }, 5000);
     }
 }
