@@ -3,13 +3,13 @@
 <div class="page-title-area page-title-bg1">
     <div class="container">
         <div class="page-title-content">
-            <h2>In Tunisia Blog</h2>
+            <h2>Complaints</h2>
         </div>
     </div>
 </div>
 
 <section class="blog-area ptb-100">
-    <button class="btn btn-success" routerLink="/add-complaint" style="margin-left: 200px">Add a Story</button>
+    <button class="btn btn-success" routerLink="/add-complaint" style="margin-left: 200px">Add a Complaint</button>
     <br><br>   <br><br>
     <div class="container">
         <div class="row">
@@ -23,9 +23,9 @@
                     </div>
 
                     <div class="post-content">
-                        <span class="category">In Tunisia Blog</span>
+                        <span class="category">Your complaint</span>
                         <h3>{{p.titre}}</h3>
-                        <a [routerLink]="['/complaint-details',p.id]" class="details-btn">Read Story</a>
+                        <a [routerLink]="['/complaint-details',p.id]" class="details-btn">Read Complaint</a>
                     </div>
                 </div>
             </div>

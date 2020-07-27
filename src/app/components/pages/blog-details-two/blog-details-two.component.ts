@@ -30,10 +30,10 @@ export class BlogDetailsTwoComponent implements OnInit {
         //  console.log(formulaire.value);
         this.service.putpost(this.post).subscribe(response => {
             this.msg = response;
-            this.toast.success('Your Story Has been Updated Succefully , Yaay');
+            this.toast.success('Your Complaints Has been Updated Succefully , Yaay');
             this.routers.navigate(['complaints']);},
             error => {
-                this.toast.success('Your Listing Has Benn Added', 'Yaaay');
+                this.toast.success('Your Complaints Has Benn Added', 'Yaaay');
 
         });
     }

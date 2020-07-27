@@ -30,11 +30,11 @@ export class AddProductComponent implements OnInit {
         const image = form.value.image;
         console.log(form.value);
         this.api.postpost(form.value).subscribe(reponse => {
-                this.toast.success('Your Story Has Benn Added', 'Yaaay');
-                this.router.navigate(['blog-one']);
+                this.toast.success('Your Complaint Has Benn Added', 'Yaaay');
+                this.router.navigate(['complaints']);
             },
             error => {
-                this.toast.success('Your Story Has Benn Added', 'Yaaay');
+                this.toast.success('Your Complaint Has Benn Added', 'Yaaay');
             });
     }
 }

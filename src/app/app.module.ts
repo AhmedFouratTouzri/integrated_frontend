@@ -78,6 +78,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     ErrorComponent,
     ComingSoonComponent,
     LoginComponent,
+
     RegisterComponent,
     ProductItemComponent,
     DetailEventComponent,

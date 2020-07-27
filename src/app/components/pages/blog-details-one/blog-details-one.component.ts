@@ -31,7 +31,7 @@ export class BlogDetailsOneComponent implements OnInit {
         const headers = new Headers({'Content-Type': 'application/json; charset = utf-8;'});
        // console.log(this.service.deletePost(id));
         this.service.deletepostt(id).subscribe(data => {
-            this.toast.success('Blog Element Deleted With Success', 'Thank you');
+            this.toast.success('Complaint Deleted With Success');
             this.routers.navigate(['/complaints']);
         });
     }
