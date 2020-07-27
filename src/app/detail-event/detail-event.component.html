@@ -1,0 +1,60 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Listing Details</h2>
+        </div>
+    </div>
+</div>
+
+<section class="listing-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="listing-details-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="listing-title">
+                        <h2>{{event.titre}}</h2>
+                        <p>{{event.prix}}</p>
+                    </div>
+
+                <div class="col-lg-4">
+                    <div class="listing-price">
+                        <div class="listing-review">
+                            <div class="review-stars">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="listing-details-image-slides owl-carousel owl-theme">
+                    <div class="listing-details-image text-center">
+                        <img src="{{event.image}}" alt="image">
+                    </div>
+                </div>
+
+                <div class="listing-details-desc">
+                    <h3>Description</h3>
+                    <p><strong>{{event.description}}</strong></p>
+
+                    <ul class="description-features-list">
+                        <li>Great Price</li>
+                        <li>An Event that you wouldn't won't to miss</li>
+
+                    </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>

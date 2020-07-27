@@ -1,0 +1,61 @@
+<section class="register-area">
+    <div class="row m-0">
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-image">
+                <img src="assets/img/register-bg.jpg" alt="image">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-content">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="register-form">
+                            <div class="logo">
+                                <a routerLink="/"><img src="assets/img/black-logo.png" alt="image"></a>
+                            </div>
+
+                            <h3>add post</h3>
+                            <form #formulaire="ngForm">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter USER ID " name="user_id" id="user_id" #user_id="ngModel" ngModel required class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="user_id.invalid && user_id.touched">the user is not added</div>
+
+                                <div class="form-group">
+                                    <input type="date" placeholder="Enter Your date" name="date_publication" id="date_publication" #date_publication="ngModel" ngModel required class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="date_publication.invalid && date_publication.touched">the date is mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your title" name="titre" id="titre" #titre="ngModel" ngModel required  class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="titre.invalid && titre.touched">the title is mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Confirm Your description" name="description" id="description" #description="ngModel" ngModel required class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="description.invalid && description.touched">the description is mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your story" name="contenu" id="contenu" #contenu="ngModel" ngModel required  class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="contenu.invalid && contenu.touched">the content is mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your picture" name="image" id="image" #image="ngModel" ngModel required  class="form-control">
+                                </div>
+                                <div class="alert-danger" *ngIf="image.invalid && image.touched">the post picture is mandatory</div>
+
+                                <a routerLink="/blog-one">
+                                    <button class="btn-success" [disabled]="formulaire.invalid" (click)="addpost(formulaire)">add post</button>
+                                </a>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

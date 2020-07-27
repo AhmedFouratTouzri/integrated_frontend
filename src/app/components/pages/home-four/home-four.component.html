@@ -1,0 +1,250 @@
+<app-header-one></app-header-one>
+
+<div class="home-area">
+    <div class="home-slides owl-carousel owl-theme">
+        <div class="hero-banner banner-bg2"></div>
+        <div class="hero-banner banner-bg3"></div>
+        <div class="hero-banner banner-bg4"></div>
+    </div>
+
+    <div class="main-banner-content">
+        <h1><span>Discover</span> Our Amazing Tunisia</h1>
+
+        <div class="main-search-wrap">
+            <form>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="form-group">
+                            <label><i class='bx bxs-keyboard'></i></label>
+                            <input type="text" placeholder="Whar are you looking for?">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group">
+                            <label><a href="#"><i class='bx bx-current-location'></i></a></label>
+                            <input type="text" placeholder="Location">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-group">
+                            <label><i class='bx bx-slider'></i></label>
+                            <select>
+                                <option>All Categories</option>
+                                <option>Shops</option>
+                                <option>Hotels</option>
+                                <option>Restaurants</option>
+                                <option>Fitness</option>
+                                <option>Events</option>
+                                <option>Services</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-search-btn">
+                    <button type="submit">Search <i class='bx bx-search-alt'></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<section class="listing-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Discover</span>
+            <h2>The Latest Listing</h2>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div *ngFor="let listing of lastlistings" class="col-lg-4">
+                <div class="single-listing-box">
+                    <a routerLink="/place-details/{{listing.id}}" class="listing-image">
+                        <img src="" alt="image">
+                    </a>
+
+                    <div class="listing-badge"><a routerLink="/place-details/{{ listing.id}}">Open Now</a></div>
+
+                    <div class="listing-content">
+                        <div class="content">
+
+                            <h3><a routerLink="/place-details/{{ listing.id}}">{{listing.name}}</a></h3>
+                            <span class="location"><i class='bx bx-map'></i> {{listing.adresse}}</span>
+
+                            <div class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+
+                        <div class="footer-content">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="listing-option-list">
+                                    <a routerLink="/home" title="Find Directions"><i class='bx bx-directions'></i></a>
+                                    <a routerLink="/home" title="Save"><i class='bx bx-heart'></i></a>
+                                    <a routerLink="/home" title="On the Map"><i class='bx bx-map'></i></a>
+                                </div>
+
+                                <div class="listing-category">
+                                    <a routerLink="/home" data-toggle="tooltip" data-placement="top" title="Category">
+                                        <i class='bx bx-wine'></i>
+                                        {{listing.categorie}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="listing-categories-area bg-F7F9FB pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let c of category" class="col-lg-3 col-sm-6 col-md-4" >
+                <div class="single-listing-category">
+                    <a [routerLink]="['/product-bycategory',c.id]" >
+                        <img src='{{c.image}}'>
+                        {{c.name}}
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="destinations-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Browse</span>
+            <h2>Popular Destinations</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12">
+                <div class="single-destinations-box">
+                    <img src="assets/img/destinations/dar_selma.jpg" alt="image">
+
+                    <div class="content">
+                        <h3>Dar Selma</h3>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+
+                    <span class="listing-count">Nabeul</span>
+
+                    <a routerLink="/dar-selma" class="link-btn"></a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-sm-12 col-md-12">
+                <div class="single-destinations-box" routerLink="/billionaire">
+                    <img src="assets/img/destinations/billionaire.jpg" alt="image">
+
+                    <div class="content">
+                        <h3>Billionaire</h3>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+
+                    <span class="listing-count">Gammarth</span>
+
+                    <a routerLink="/billionaire" class="link-btn"></a>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 col-md-6">
+                        <div class="single-destinations-box">
+                            <img src="assets/img/destinations/villa_bleu.jpg" alt="image">
+
+                            <div class="content">
+                                <h3>Villa Bleu Sidi Bou Said</h3>
+                                <div class="rating">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                            </div>
+
+                            <span class="listing-count">Sidi Bou Said</span>
+
+                            <a routerLink="/villa-bleu" class="link-btn"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12 col-md-6">
+                        <div class="single-destinations-box">
+                            <img src="assets/img/destinations/baristas.jfif" alt="image">
+
+                            <div class="content">
+                                <h3>Barista's</h3>
+                                <div class="rating">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                            </div>
+
+                            <span class="listing-count">Lac Tunis</span>
+
+                            <a routerLink="/barista" class="link-btn"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Recent Stories</span>
+            <h2>From In Tunisia Blog</h2>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let blog of homeblogs" class="col-lg-4 col-md-6">
+                <div class="single-blog-post">
+                    <div class="post-image">
+                        <a routerLink="/blog-details-one">
+                            <img src="{{blog.image}}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="post-content">
+                        <span class="category">{{blog.date_publication | date}}</span>
+                        <h3><a routerLink="/blog-details-one">{{blog.titre}}</a></h3>
+                        <a routerLink="/blog-details-one" class="details-btn">Read Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

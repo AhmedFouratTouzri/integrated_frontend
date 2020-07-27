@@ -1,0 +1,62 @@
+<section class="register-area">
+    <div class="row m-0">
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-image">
+                <img src="assets/img/register-bg.jpg" alt="image">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-content">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="register-form">
+                            <div class="logo">
+                                <a routerLink="/"><img src="assets/img/black-logo.png" alt="image"></a>
+                            </div>
+
+                            <form >
+
+                                <div >
+                                    <div class="form-group">
+                                        <input type="text"  name="titre" #titre="ngModel"  [(ngModel)]="event.titre"   class="form-control">
+
+                                    </div>
+                                    <div class="alert-danger" *ngIf="titre.invalid && titre.touched">LE TITRE EST OBLIGATOIRE</div>
+
+                                    <div class="form-group">
+                                        <input type="text" placeholder={{event.description}} name="description" id="description" #description="ngModel" [(ngModel)]="event.description" required class="form-control">
+
+                                    </div>
+
+                                    <div class="alert-danger" *ngIf="description.invalid && description.touched">LA DESCRIPTION EST OBLIGATOIRE</div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder={{event.image}} name="image" id="image" #image="ngModel" [(ngModel)]="event.image" required class="form-control">
+                                    </div>
+
+                                    <div class="alert-danger" *ngIf="image.invalid && image.touched">VEUILLEZ entrer l image</div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder={{event.prix}} name="prix" id="prix" #prix="ngModel" [(ngModel)]="event.prix" required class="form-control">
+                                    </div>
+
+                                    <div class="alert-danger" *ngIf="prix.invalid && prix.touched">VEUILLEZ SAISIR LE PRIX</div>
+
+                                    <div class="form-group">
+                                        <input type="text"  name="datedebut" id="datedebut"#datedebut="ngModel" [(ngModel)]="event.datedebut" required class="form-control">
+                                    </div>
+                                    <div>
+                                    </div>
+
+                                    <div> </div>
+                                </div>
+
+                                <button  class="btn-success" (click)="putEvent()">Update Event</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,47 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg3">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Blog Grid (Full Width)</h2>
+        </div>
+    </div>
+</div>
+
+<section class="blog-area ptb-100">
+    <div class="container-fluid">
+        <div class="row">
+            <tr *ngFor="let u of posts" >
+            <div class="col-lg-3 col-md-6">
+                <div class="single-blog-post">
+                    <div class="post-image">
+                        <a routerLink="/blog-details-three">
+                            <img src="assets/img/blog/img1.jpg" alt="image">
+                        </a>
+                        <div class="date">
+                            <span>January 29, 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="post-content">
+                        <span class="category">{{u.description}}</span>
+                        <h3><a routerLink="/blog-details-three">{{u.titre}}</a></h3>
+                        <a routerLink="/blog-details-three" class="details-btn">Read Story</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="pagination-area text-center">
+                    <a routerLink="/blog-three" class="prev page-numbers"><i class='bx bx-chevron-left'></i></a>
+                    <span class="page-numbers current" aria-current="page">1</span>
+                    <a routerLink="/blog-three" class="page-numbers">2</a>
+                    <a routerLink="/blog-three" class="page-numbers">3</a>
+                    <a routerLink="/blog-three" class="page-numbers">4</a>
+                    <a routerLink="/blog-three" class="page-numbers">5</a>
+                    <a routerLink="/blog-three" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

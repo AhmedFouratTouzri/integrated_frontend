@@ -1,0 +1,72 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Place details</h2>
+        </div>
+    </div>
+</div>
+
+<section class="listing-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="listing-details-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="listing-title">
+                        <h2>{{emplacement.name}}</h2>
+                        <p>Discover One of our most amazing and wonderful places the view and the services are something to die for :D.</p>
+                    </div>
+
+                    <div class="listing-meta">
+                        <ul>
+                            <li>
+                                <i class='bx bx-folder-open'></i>
+                                <span>Category</span>
+                                <a>{{emplacement.categorie}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="listing-price">
+                        <div class="listing-review">
+                            <div class="review-stars">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="listing-details-image-slides owl-carousel owl-theme">
+                    <div class="listing-details-image text-center">
+                        <img src="{{emplacement.photo}}" alt="image">
+                    </div>
+
+                </div>
+
+                <div class="listing-details-desc">
+                    <h3>Description</h3>
+                    <p><strong>{{emplacement.description}}</strong></p>
+<br><br>
+                    <div class="price">Number of Available Places : {{emplacement.nbr}}</div>
+<br><br>
+
+                    <ul class="description-features-list">
+                        <li>Amazing Views</li>
+                        <li>Wondeful Services</li>
+                    </ul>
+
+                    <div class="listing-author">
+                        <div class="author-profile-header"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,96 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Blog Grid (3 in Row)</h2>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
+        Modal Login Form</a>
+</div>
+<section class="blog-area ptb-100">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post">
+                    <a *ngFor="let u of posts" >
+                    <div class="post-image">
+                        <a routerLink="/blog-details-two">
+                            <img src="assets/img/blog/img1.jpg" alt="image">
+                        </a>
+                        <div class="date">
+                            <span>January 29, 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="post-content">
+                        <span class="category">{{u.description}}</span>
+                        <h3><a routerLink="/blog-details-two">{{u.titre}}</a></h3>
+                        <a routerLink="/blog-details-one" class="details-btn"><a href="/post/{{u.id}}">Read Story</a></a>
+                    </div>
+
+
+            </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add Article</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+           <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <div class="form-group">
+                        <label>Title <span class="required">*</span></label>
+                        <input type="text" class="form-control" formControlName="title">
+
+                        </div>
+                    </div>
+                <div class="md-form mb-5">
+                    <div class="form-group">
+                        <label>Description <span class="required">*</span></label>
+                        <input type="text" class="form-control" formControlName="description">
+
+                    </div>
+                </div>
+                <div class="md-form mb-5">
+                    <div class="form-group">
+                        <label>Content of the your article <span class="required">*</span></label>
+                        <input type="text" class="form-control" formControlName="contenu">
+
+                    </div>
+                </div>
+                <div class="md-form mb-5">
+                    <div class="form-group">
+                        <label>Image <span class="required">*</span></label>
+                        <input type="file" class="form-control" name="image" (change)="onSelectedFile($event)" formControlName="image">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-default" type="submit">Add Article</button>
+            </div>
+           </form>
+        </div>
+    </div>
+</div>
+

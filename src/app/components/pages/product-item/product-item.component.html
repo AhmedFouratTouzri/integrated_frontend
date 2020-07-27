@@ -1,0 +1,23 @@
+<div class="single-products-box">
+        <div class="products-image">
+
+                <img src="{{productItem.image}}" class="main-image" alt="image">
+
+        </div>
+
+        <div class="products-content">
+            <h3><a [routerLink]="['/detail-product',productItem.id]">{{productItem.ref_prod}}</a></h3>
+            <div class="price">
+                <span class="new-price">{{productItem.prix}}</span>
+            </div>
+            <div class="star-rating">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <a class="add-to-cart" (click)="addToCart(productItem)">Add to Cart</a>
+        </div>
+    </div>
+

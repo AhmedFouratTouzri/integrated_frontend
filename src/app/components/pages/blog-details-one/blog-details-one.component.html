@@ -1,0 +1,50 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Blog Details</h2>
+        </div>
+    </div>
+</div>
+
+<section class="blog-details-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="blog-details-desc">
+                    <div class="article-image">
+                        <img src="{{post.image}}" alt="image">
+                    </div>
+
+                    <div class="article-content">
+                        <div class="entry-meta">
+                            <ul>
+                                <li>
+                                    <i class='bx bx-calendar'></i>
+                                    <span>Publication Date</span>
+                                    <a routerLink="/blog-details-one">{{post.date_publication | date}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>{{post.titre}}</h3>
+
+
+                        <h3>Description</h3>
+                        <p>{{post.description}}</p>
+
+                        <h3>Content</h3>
+                        <p>{{post.contenu}}</p>
+                    </div>
+
+                    <div class="article-author">
+                        <div class="author-profile-header"></div>
+                        <br><br><br>
+                        <button [routerLink]="['/update-complaint',post.id]" class="btn btn-success">Update</button>
+                        &nbsp;&nbsp;&nbsp;<button class="btn btn-danger" (click)="remove(post.id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

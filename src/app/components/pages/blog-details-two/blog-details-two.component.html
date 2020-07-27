@@ -1,0 +1,33 @@
+<section class="register-area">
+    <div class="row m-0">
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-image">
+                <img src="https://redhawkcrescent.com/wp-content/uploads/2019/06/a50.jpg" alt="image">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-content">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="register-form">
+                            <div class="logo">
+                                <a routerLink="/"><img src="assets/img/black-logo.png" alt="image"></a>
+                            </div>
+                            <form >
+                                <div class="form-group"> <input name="titre"  type="text" class="form-control" [(ngModel)]="post.titre"></div>
+                                <div class="form-group"><input name="date_publication"type="text" class="form-control" [(ngModel)]="post.date_publication"></div>
+                                <div class="form-group"> <input name="description"type="text" class="form-control" [(ngModel)]="post.description"></div>
+                                <div class="form-group"> <input name="image"type="text" class="form-control" [(ngModel)]="post.image"></div>
+                                <div class="form-group"> <input name="contenu"type="text" class="form-control" [(ngModel)]="post.contenu"></div>
+                                <div class="form-group"> <button class="btn-success"(click)="putPost()">Update Post</button></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

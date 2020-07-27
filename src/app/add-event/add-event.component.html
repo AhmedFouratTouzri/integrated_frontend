@@ -1,0 +1,59 @@
+<section class="register-area">
+    <div class="row m-0">
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-image">
+                <img src="https://redhawkcrescent.com/wp-content/uploads/2019/06/a50.jpg" alt="image">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 p-0">
+            <div class="register-content">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="register-form">
+                            <div class="logo">
+                                <a routerLink="/"><img src="assets/img/black-logo.png" alt="image"></a>
+                            </div>
+
+                            <form #formulaire="ngForm">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your titre"name="titre" id="titre" #titre="ngModel" ngModel required class="form-control">
+
+                                </div>
+                                <div class="alert-danger" *ngIf="titre.invalid && titre.touched">The title is Mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your description"name="description" id="description" #description="ngModel" ngModel required class="form-control">
+                                </div>
+
+                                <div class="alert-danger" *ngIf="description.invalid && description.touched">The Description is Mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your price"name="prix" id="prix" #prix="ngModel" ngModel required class="form-control">
+                                </div>
+
+                                <div class="alert-danger" *ngIf="prix.invalid && prix.touched">The price is Mandatory</div>
+
+                                <div class="form-group">
+                                    <input type="date" placeholder="enter your date" name="datedebut" id="datedebut"#datedebut="ngModel" ngModel required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Your photo" name="image" id="image" #image="ngModel" ngModel required class="form-control">
+
+                                </div>
+                                <div class="alert-danger" *ngIf="image.invalid && image.touched">The image is mandatory</div>
+                                <div class="form-group">
+                                    <input type="iduser" placeholder="enter your id" name="iduser" id="iduser"#iduser="ngModel" ngModel required class="form-control">
+                                </div>
+
+                                <div class="alert-danger" *ngIf="iduser.invalid && iduser.touched">Mandatory Field</div>
+
+                                <button  class="btn-success" [disabled]="formulaire.invalid" (click)="addEvent(formulaire)">Add Event</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

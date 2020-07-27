@@ -1,0 +1,92 @@
+<app-header-one></app-header-one>
+
+<div class="page-title-area page-title-bg3">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Listing</h2>
+        </div>
+    </div>
+</div>
+
+<section class="listing-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="listing-filter-options">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="listing-ordering-list">
+                                <button class="btn btn-primary" style="margin-left: 62%"> <a routerLink="/add-event">Add An Event</a></button>
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngFor="let e of event"  class="col-lg-6 col-md-12">
+                <div class="single-listing-box">
+                    <a [routerLink]="['/event-details', e.id]" class="listing-image">
+                        <img src="{{e.image}}" alt="image">
+                    </a>
+                    <div class="listing-badge">Open Now</div>
+
+                    <div class="listing-content">
+                        <div class="content">
+
+                            <h3>{{e.titre}}</h3>
+                            <span class="location"><i class='bx bx-map'></i></span>
+
+                            <div class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <span class="rating-count">{{e.datedebut | date}}</span>
+                            </div>
+                        </div>
+
+                        <div class="footer-content">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="listing-option-list">
+                                </div>
+                                <div class="price-level">
+                                    <span data-toggle="tooltip" data-placement="top" title="category" >
+                                        <strong> <a [routerLink]="['/update-event', e.id]" class="add-to-cart" style="color: white">Modify Event</a></strong>
+                                    </span>
+                                </div>
+
+                                <div class="price-level">
+                                    <span data-toggle="tooltip" data-placement="top" title="category" style="margin-right: 230px">
+                                        <strong (click)="remove(e.id)" class="add-to-cart" style="color: white">Delete Event</strong>
+                                    </span>
+                                </div>
+
+                                <div class="price-level">
+                                    <span data-toggle="tooltip" data-placement="top" title="Ultra Hight">
+                                        <strong>{{e.prix}} TND</strong>
+                                    </span>
+                                </div>
+
+                                <div class="listing-category">
+                                    <a routerLink="/" data-toggle="tooltip" data-placement="top" title="Category">
+                                        <i class='bx bx-wine'></i>
+                                        {{e.titre}}
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+            </div>
+        </div>
+    </div>
+</section>
