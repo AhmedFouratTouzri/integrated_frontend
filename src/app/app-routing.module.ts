@@ -5,7 +5,6 @@ import {HomeTwoComponent} from './components/pages/home-two/home-two.component';
 import {HomeThreeComponent} from './components/pages/home-three/home-three.component';
 import {HomeFourComponent} from './components/pages/home-four/home-four.component';
 import {AboutComponent} from './components/pages/about/about.component';
-import {TeamComponent} from './components/pages/team/team.component';
 import {HowItWorksComponent} from './components/pages/how-it-works/how-it-works.component';
 import {ContactComponent} from './components/pages/contact/contact.component';
 import {CategoriesOneComponent} from './components/pages/categories-one/categories-one.component';
@@ -21,7 +20,6 @@ import {ProductsDetailsComponent} from './components/pages/products-details/prod
 import {CartComponent} from './components/pages/cart/cart.component';
 import {CheckoutComponent} from './components/pages/checkout/checkout.component';
 import {BlogOneComponent} from './components/pages/blog-one/blog-one.component';
-import {BlogTwoComponent} from './components/pages/blog-two/blog-two.component';
 import {BlogThreeComponent} from './components/pages/blog-three/blog-three.component';
 import {BlogFourComponent} from './components/pages/blog-four/blog-four.component';
 import {BlogFiveComponent} from './components/pages/blog-five/blog-five.component';
@@ -37,12 +35,7 @@ import {AuthGuard} from './_guard';
 import {DetailEventComponent} from "./detail-event/detail-event.component";
 import {AddEventComponent} from "./add-event/add-event.component";
 import {AddProductComponent} from "./components/pages/add-product/add-product.component";
-import {HbibproductDetailComponent} from "./components/pages/hbibproduct-detail/hbibproduct-detail.component";
 import {ProductBycategoryComponent} from "./components/pages/product-bycategory/product-bycategory.component";
-import {BaristaComponent} from "./components/pages/barista/barista.component";
-import {BillionaireComponent} from "./components/pages/Billionnaire/billionaire.component";
-import {VillaBleuComponent} from "./components/pages/villa-bleu/villa-bleu.component";
-import {DarSelmaComponent} from "./components/pages/dar-selma/dar-selma.component";
 import { MyAccountComponent } from './my-account/my-account.component';
 
 const routes: Routes = [
@@ -51,7 +44,6 @@ const routes: Routes = [
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'home', component: HomeFourComponent},
     {path: 'about', component: AboutComponent},
-    {path: 'team', component: TeamComponent},
     {path: 'how-it-works', component: HowItWorksComponent},
     {path: 'categories-one', component: CategoriesOneComponent},
     {path: 'categories-two', component: CategoriesTwoComponent},
@@ -60,13 +52,8 @@ const routes: Routes = [
     {path: 'events', component: ListingThreeComponent},
     {path: 'listing-four', component: ListingFourComponent},
     {path: 'listing-five', component: ListingFiveComponent},
-    {path: 'barsita', component: BaristaComponent},
-    {path: 'billionaire', component: BillionaireComponent},
-    {path: 'villa-bleu', component: VillaBleuComponent},
-    {path: 'dar-selma', component: DarSelmaComponent},
     {path: 'place-details/:id', component: ListingDetailsComponent},
     {path: 'complaints', component: BlogOneComponent},
-    {path: 'blog-two', component: BlogTwoComponent},
     {path: 'blog-three', component: BlogThreeComponent},
     {path: 'blog-four', component: BlogFourComponent},
     {path: 'blog-five', component: BlogFiveComponent},
@@ -82,7 +69,6 @@ const routes: Routes = [
     {path: 'faqs', component: FaqComponent},
     {path: 'error', component: ErrorComponent},
     {path: 'coming-soon', component: ComingSoonComponent},
-    {path: 'detail-product/:id', component: HbibproductDetailComponent},
     {path: 'login', component: LoginComponent},
     {path: 'add-complaint', component: AddProductComponent},
     {path: 'register', component: RegisterComponent},

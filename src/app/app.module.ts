@@ -19,7 +19,6 @@ import { InstagramComponent } from './components/common/instagram/instagram.comp
 import { HeaderThreeComponent } from './components/layouts/header-three/header-three.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { FunfactsComponent } from './components/common/funfacts/funfacts.component';
-import { TeamComponent } from './components/pages/team/team.component';
 import { HowItWorksComponent } from './components/pages/how-it-works/how-it-works.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { CategoriesOneComponent } from './components/pages/categories-one/categories-one.component';
@@ -35,7 +34,6 @@ import { ProductsDetailsComponent } from './components/pages/products-details/pr
 import { CartComponent } from './components/pages/cart/cart.component';
 import { CheckoutComponent } from './components/pages/checkout/checkout.component';
 import { BlogOneComponent } from './components/pages/blog-one/blog-one.component';
-import { BlogTwoComponent } from './components/pages/blog-two/blog-two.component';
 import { BlogThreeComponent } from './components/pages/blog-three/blog-three.component';
 import { BlogFourComponent } from './components/pages/blog-four/blog-four.component';
 import { BlogFiveComponent } from './components/pages/blog-five/blog-five.component';
@@ -60,13 +58,8 @@ import {AuthConfig, AuthHttp} from "angular2-jwt";
 import { DetailEventComponent } from './detail-event/detail-event.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { AddProductComponent } from './components/pages/add-product/add-product.component';
-import { HbibproductDetailComponent } from './components/pages/hbibproduct-detail/hbibproduct-detail.component';
 import { CategoryListComponent } from './components/pages/category-list/category-list.component';
 import { ProductBycategoryComponent } from './components/pages/product-bycategory/product-bycategory.component';
-import {BaristaComponent} from "./components/pages/barista/barista.component";
-import {DarSelmaComponent} from "./components/pages/dar-selma/dar-selma.component";
-import {BillionaireComponent} from "./components/pages/Billionnaire/billionaire.component";
-import {VillaBleuComponent} from "./components/pages/villa-bleu/villa-bleu.component";
 import { MyAccountComponent } from './my-account/my-account.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
@@ -91,7 +84,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     HeaderThreeComponent,
     AboutComponent,
     FunfactsComponent,
-    TeamComponent,
+
     HowItWorksComponent,
     ContactComponent,
     CategoriesOneComponent,
@@ -107,7 +100,6 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     CartComponent,
     CheckoutComponent,
     BlogOneComponent,
-    BlogTwoComponent,
     BlogThreeComponent,
     BlogFourComponent,
     BlogFiveComponent,
@@ -118,18 +110,17 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     ErrorComponent,
     ComingSoonComponent,
     LoginComponent,
+
     RegisterComponent,
     ProductItemComponent,
     DetailEventComponent,
     AddEventComponent,
     AddProductComponent,
-    HbibproductDetailComponent,
+
     CategoryListComponent,
     ProductBycategoryComponent,
-      VillaBleuComponent,
-      BillionaireComponent,
-      DarSelmaComponent,
-      BaristaComponent,
+  
+
       MyAccountComponent,
   ],
   imports: [
